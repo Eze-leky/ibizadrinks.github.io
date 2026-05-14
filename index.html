@@ -1,519 +1,157 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ibiza Drinks - Cursos de Bartenders en La Plata</title>
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/938/938063.png" type="image/png">
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Bartenders</title>
+    <meta name="description" content="Visitá nuestro sitio actual de Curso de Bartenders">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1a0f08 0%, #2d1810 50%, #1a0f08 100%);
+            color: #f5e6d3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: radial-gradient(circle at 20% 30%, rgba(212, 165, 116, 0.15) 0%, transparent 50%),
+                              radial-gradient(circle at 80% 70%, rgba(184, 115, 51, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .accent-line {
+            width: 60px;
+            height: 2px;
+            background: #d4a574;
+            margin: 0 auto 30px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 7vw, 3.5rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: #f5e6d3;
+            letter-spacing: -0.02em;
+        }
+
+        h1 span {
+            color: #d4a574;
+            font-style: italic;
+        }
+
+        p {
+            font-size: clamp(1rem, 3vw, 1.15rem);
+            font-weight: 300;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            color: #c9b8a3;
+            padding: 0 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 18px 40px;
+            background: #d4a574;
+            color: #1a0f08;
+            text-decoration: none;
+            font-size: clamp(1rem, 3vw, 1.1rem);
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(212, 165, 116, 0.3);
+            border: 2px solid #d4a574;
+            cursor: pointer;
+            min-width: 240px;
+        }
+
+        .btn:hover {
+            background: transparent;
+            color: #d4a574;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(212, 165, 116, 0.4);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .footer-text {
+            margin-top: 40px;
+            font-size: 0.85rem;
+            color: #8a7d6b;
+            font-weight: 300;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 10px;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 320px;
+                padding: 16px 30px;
+            }
+        }
+    </style>
 </head>
 <body>
-
-<!-- Navbar -->
-<nav class="navbar" id="navbar">
-    <div class="logo">
-        <span class="logo-subtitle">Cursos & Capacitaciones</span>
-        <span class="logo-main">Ibiza Drinks</span>
+    <div class="container">
+        <div class="accent-line"></div>
+        <h1>Curso de <span>Bartenders</span></h1>
+        <p>Visitá nuestro sitio oficial para conocer todos los detalles del curso, precios e inscripciones.</p>
+        <a href="https://cursodebartenders.com.ar/" class="btn" rel="noopener">Ir al sitio oficial</a>
+        <p class="footer-text">cursodebartenders.com.ar</p>
     </div>
-    <ul class="nav-links" id="navLinks">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#cursos">Cursos</a></li>
-        <li><a href="#horarios">Horarios</a></li>
-        <li><a href="#inscripcion">Inscripción</a></li>
-        <li><a href="https://www.instagram.com/ibizadrinks/" target="_blank">Instagram</a></li>
-    </ul>
-    <button class="mobile-menu-btn" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-</nav>
-
-<!-- Hero Section -->
-<section class="hero" id="inicio">
-    <div class="hero-bg"></div>
-    <div class="hero-content">
-        <div class="hero-badge">+1000 Egresados</div>
-        <h1>El arte de la<span>coctelería</span></h1>
-        <p class="hero-text">Aprende las técnicas profesionales de bartending y transforma tu pasión en una carrera. Clases 100% presenciales con práctica desde el primer día.</p>
-        <div class="hero-cta">
-            <a href="#inscripcion" class="btn-primary"><span>Reservar mi lugar</span></a>
-            <a href="#cursos" class="btn-secondary">Ver cursos</a>
-        </div>
-    </div>
-    <div class="scroll-indicator">
-        <span>Scroll</span>
-        <div class="scroll-line"></div>
-    </div>
-</section>
-
-<!-- Stats Section -->
-<section class="stats">
-    <div class="stats-grid">
-        <div class="stat-item">
-            <h4>1000+</h4>
-            <p>Egresados</p>
-        </div>
-        <div class="stat-item">
-            <h4>50+</h4>
-            <p>Cócteles</p>
-        </div>
-        <div class="stat-item">
-            <h4>1</h4>
-            <p>Mes de curso</p>
-        </div>
-        <div class="stat-item">
-            <h4>100%</h4>
-            <p>Práctico</p>
-        </div>
-    </div>
-</section>
-
-<!-- Courses Section -->
-<section class="courses" id="cursos">
-    <div class="section-header">
-        <p class="section-label">Nuestros Programas</p>
-        <h2 class="section-title">Cursos de <span>Coctelería</span></h2>
-        <p class="section-text">Formación con instructores expertos en competencias nacionales e internacionales.</p>
-    </div>
-    
-    <div class="courses-grid">
-        <div class="course-card">
-            <div class="course-number">01</div>
-            <h3 class="course-title">Curso Básico</h3>
-            <p class="course-desc">Todo lo necesario para desempeñarte profesionalmente en cualquier barra del mundo.</p>
-            <ul class="course-features">
-                <li>Técnicas fundamentales de coctelería</li>
-                <li>+50 recetas clásicas y modernas</li>
-                <li>Conocimiento de destilados y licores</li>
-                <li>Práctica desde el primer día</li>
-                <li>Cóctel de autor al finalizar</li>
-                <li>1 mes de curso</li>
-                <li>Todo el material incluido</li>
-            </ul>
-        </div>
-        
-        <div class="course-card">
-            <div class="course-number">02</div>
-            <h3 class="course-title">Curso Avanzado</h3>
-            <p class="course-desc">Para bartenders que quieren profundizar y dominar técnicas de alto nivel.</p>
-            <ul class="course-features">
-                <li>Técnicas avanzadas de mixología</li>
-                <li>Premixes de barra 2</li>
-                <li>Creacion de tus propios licores e insumos</li>
-                <li>Maridaje y diseño de cartas</li>
-                <li>Master Class Tiki</li>
-                <li>Preparación para competencias</li>
-            </ul>
-        </div>
-        
-        <div class="course-card">
-            <div class="course-number">03</div>
-            <h3 class="course-title">Tiki House</h3>
-            <p class="course-desc">Nuestro bar propio, especializado en coctelería tiki y tropical exótica.</p>
-            <ul class="course-features">
-                <li>Experiencia real de barra</li>
-                <li>Coctelería tropical y exótica</li>
-                <li>Ambiente único en La Plata</li>
-                <li>Oportunidad de pasantías</li>
-                <li>Networking con profesionales</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<!-- Features Section -->
-<section class="features">
-    <div class="features-container">
-        <div class="feature-row">
-            <div class="feature-image">
-                <img src="img2/presencial2.png" alt="Práctica de coctelería">
-            </div>
-            <div class="feature-content">
-                <h3>Clases 100% Presenciales<span>Teórico-Prácticas</span></h3>
-                <p>En nuestro curso de coctelería, no solo aprenderás teoría, sino que desde el primer día estarás en la barra elaborando cócteles. 🍷 Además, en cada clase tendrás la oportunidad de degustar distintos tragos para conocer sus sabores y técnicas de preparación. ¡Vas a degustar más de 50 cócteles!</p>
-                <ul class="feature-list">
-                    <li>Modalidad presencial con clases teórico-prácticas</li>
-                    <li>Desde el primer día estarás en acción</li>
-                    <li>Al finalizar, presentarás tu cóctel de autor</li>
-                    <li>Grupos reducidos para atención personalizada</li>
-                    <li>Materiales Incluidos</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="feature-row reverse">
-            <div class="feature-image">
-                <img src="img2/certificacion.png" alt="Certificación">
-            </div>
-            <div class="feature-content">
-                <h3>Certificación<span>Tu pasaporte laboral</span></h3>
-                <p>Al completar el curso y superar las pruebas, recibirás un certificado de finalización que avala tus conocimientos para trabajar en cualquier establecimiento.</p>
-                <ul class="feature-list">
-                    <li>Certificado de finalización </li>
-                    <li>Trabaja en bares, restaurantes y hoteles</li>
-                    <li>Posibilidad de trabajar en pasantias</li>
-                    <li>Llevá tu pasión por la coctelería al siguiente nivel</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="feature-row">
-            <div class="feature-image">
-                <img src="img2/2.jpeg" alt="Profesionales">
-            </div>
-            <div class="feature-content">
-                <h3>¿Por qué Elegirnos?<span>Aprendé de los mejores</span></h3>
-                <p>Ofrecemos un curso de coctelería único en la ciudad, creado por profesionales con amplia experiencia y trayectoria en competencias nacionales e internacionales.</p>
-                <ul class="feature-list">
-                    <li>Instructores con mas de 10 años de experiencia </li>
-                    <li>Único curso que practica desde el primer día</li>
-                    <li>Más de 1000 egresados exitosos</li>
-                    <li>Entorno dinámico y práctico</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-          <div class="pricing-content">
-    <h3>¿Cuánto cuesta el <span>curso?</span></h3>
-
-    <section class="pricing" id="precio">
-        <div class="pricing-container">
-            <div class="pricing-card">
-                <div class="pricing-badge">Oferta Limitada</div>
-                <p class="pricing-old">$180.000</p>
-                <p class="pricing-current"><span class="pricing-currency">$</span>140.000</p>
-                <p class="pricing-period">Precio total del curso con todo incluido</p>
-
-                <div class="countdown-container">
-                    <p class="countdown-label">El precio cambia en:</p>
-                    <div class="countdown">
-                        <div class="countdown-item">
-                            <div class="countdown-number" id="horas">00</div>
-                            <div class="countdown-unit">Horas</div>
-                        </div>
-                        <div class="countdown-item">
-                            <div class="countdown-number" id="minutos">00</div>
-                            <div class="countdown-unit">Min</div>
-                        </div>
-                        <div class="countdown-item">
-                            <div class="countdown-number" id="segundos">00</div>
-                            <div class="countdown-unit">Seg</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pricing-highlight">
-                    <p><strong>💡 Poné esto en contexto:</strong> Tomar 50 cócteles en un bar te costaría más del TRIPLE, y al día siguiente no te queda nada. Con esta inversión mínima obtenés conocimientos, práctica y una profesión que te acompañará toda la vida.</p>
-                </div>
-
-                <div class="payment-methods">
-                    <h4>💳 Formas de Pago</h4>
-                    <div class="payment-options">
-                        <div class="payment-option">
-                            <span class="payment-icon">📌</span>
-                            <div>
-                                <strong>Reserva tu lugar</strong>
-                                <p>50% de seña para asegurar tu cupo</p>
-                            </div>
-                        </div>
-                        <div class="payment-option">
-                            <span class="payment-icon">✅</span>
-                            <div>
-                                <strong>Saldo al iniciar</strong>
-                                <p>50% restante el primer día de clase</p>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="payment-note">Aceptamos efectivo y transferencia bancaria</p>
-                </div>
-
-                <div class="pricing-action" style="margin-top: 20px;">
-                    <a href="#inscripcion" class="btn-primary" style="display: block; text-align: center; text-decoration: none;">
-                        <span>¡Reservar ahora!</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-</div>
-
-
-<section class="schedule" id="horarios">
-    <div class="section-header">
-        <p class="section-label">Próximas fechas</p>
-        <h2 class="section-title">Horarios <span>Disponibles</span></h2>
-        <p class="section-text">Elige el horario que mejor se adapte a tu disponibilidad. Los cupos son limitados.</p>
-    </div>
-    
-  <!--   <div class="schedule-tables">
-        <div class="schedule-month">
-            <h3>Enero 2026</h3>
-            <table class="schedule-table">
-                <thead>
-                    <tr>
-                        <th>Día de Inicio</th>
-                        <th>Fecha</th>
-                        <th>Horario</th>
-                        <th>Días</th>
-                        <th>Cupos</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Martes</td>
-                        <td>13/01</td>
-                        <td>17:00 a 19:00</td>
-                        <td>Martes y Jueves</td>
-                        <td class="status-full">Sin cupos</td>
-                    </tr>
-                    <tr class="last-spot-row">
-                        <td>Miércoles</td>
-                        <td>14/01</td>
-                        <td>17:00 a 19:00</td>
-                        <td>Miércoles y Viernes</td>
-                        <td class="status-full">Sin cupos</td>
-                    </tr>
-                    <tr>
-                        <td>Sábado</td>
-                        <td>17/01</td>
-                        <td>14:00 a 18:00</td>
-                        <td>Sábados</td>
-                        <td class="status-full">Sin cupos</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>  -->
-        
-        <div class="schedule-month">
-            <h3>Abril 2026</h3>
-            <table class="schedule-table">
-                <thead>
-                    <tr>
-                        <th>Día de Inicio</th>
-                        
-                        <th>Horario</th>
-                        <th>Días</th>
-                        <th>Cupos</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Martes 14/04</td>
-                        
-                        <td>17:00 a 19:00</td>
-                        <td>Martes y Jueves</td>
-                        <td class="status-available"> 6 </td>
-                    </tr>
-                    <tr>
-                        <td>Miércoles 15/04</td>
-                        
-                        <td>17:00 a 19:00</td>
-                        <td>Miércoles y Viernes</td>
-                        <td class="status-available"> 6 </td>
-                    </tr>
-                    <tr>
-                        <td>Sábado 11/04</td>
-                        
-                        <td>14:00 a 18:00</td>
-                        <td>Sábados</td>
-                        <td class="status-available"> 6 </td>
-                    </tr>
-                </tbody>
-            </table>
-
-
-
-            
-        <!--<div class="schedule-month">
-            <h3>Marzo 2026</h3>
-            <table class="schedule-table">
-                <thead>
-                    <tr>
-                        <th>Día de Inicio</th>
-                        
-                        <th>Horario</th>
-                        <th>Días</th>
-                        <th>Cupos</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Martes 10/03</td>
-                        
-                        <td>17:00 a 19:00</td>
-                        <td>Martes y Jueves</td>
-                        <td class="status-available"> 6 Lugares Disponibles </td>
-                    </tr>
-                    <tr>
-                        <td>Miércoles 11/03</td>
-                        
-                        <td>17:00 a 19:00</td>
-                        <td>Miércoles y Viernes</td>
-                        <td class="status-available"> 6 Lugares Disponibles </td>
-                    </tr>
-                    <tr>
-                        <td>Sábado 14/03</td>
-                        
-                        <td>14:00 a 18:00</td>
-                        <td>Sábados</td>
-                        <td class="status-available"> 6 Lugares Disponibles </td>
-                    </tr>
-                </tbody>
-            </table>
-
-
-            
-        </div>
-    </div>
-</section>
-
-<!-- Location Section ¡Último cupo!-->
-<section class="location">
-    <div class="location-grid">
-        <div class="location-content">
-            <p class="section-label">Ubicación</p>
-            <h3>¿Dónde nos encontramos?</h3>
-            <div class="location-address">
-                <div class="location-address-icon">📍</div>
-                <p>
-                    <strong>La Plata, Buenos Aires</strong>
-                    Diagonal 74 Nro. 2222<br>
-                    Entre calles 58 y 59
-                </p>
-            </div>
-            <p class="section-text" style="margin-bottom: 2rem;">Si te interesa nuestro curso de coctelería, contactanos para coordinar el pago de la seña e inscribirte. Los cupos son muy <strong>LIMITADOS</strong> para garantizar una enseñanza personalizada y de calidad.</p>
-            <a href="https://www.instagram.com/ibizadrinks/" target="_blank" class="btn-primary"><span>Contactar por Instagram</span></a>
-        </div>
-        <div class="location-image">
-            <img src="img2/nosotross.jpeg" alt="Ibiza Drinks ubicación">
-        </div>
-    </div>
-</section>
-
-<!-- Enrollment Section -->
-<section class="enrollment" id="inscripcion">
-    <div class="section-header">
-        <p class="section-label">Reserva tu lugar</p>
-        <h2 class="section-title">Formulario de <span>Inscripción</span></h2>
-        <p class="section-text">Completá el formulario y nos pondremos en contacto contigo para coordinar tu inscripción.</p>
-    </div>
-    
-    <div class="form-container google-form-container">
-        <iframe 
-            src="https://docs.google.com/forms/d/e/1FAIpQLSdt3uspZNsS4LbbL615XPyk6QwCRcLsP16OtjEaRq4AiR-8tg/viewform?embedded=true" 
-            width="100%" 
-            height="800" 
-            frameborder="0" 
-            marginheight="0" 
-            marginwidth="0"
-            loading="lazy">
-            Cargando…
-        </iframe>
-    </div>
-</section>
-
-<!-- WhatsApp Floating Button -->
-<a href="https://wa.me/542216005043?text=Hola!%20Quiero%20información%20sobre%20el%20curso%20de%20coctelería" 
-   class="whatsapp-float" 
-   target="_blank" 
-   aria-label="Contactar por WhatsApp">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-    </svg>
-</a>
-
-<!-- Footer -->
-<footer>
-    <div class="footer-content">
-        <div class="footer-logo">Ibiza Drinks</div>
-        <div class="footer-links">
-            <a href="https://www.instagram.com/ibizadrinks/" target="_blank">Instagram</a>
-            <a href="https://www.instagram.com/tikihouselp" target="_blank">Tiki House</a>
-            <a href="#inscripcion">Inscripción</a>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2026 Ibiza Drinks - Cursos de Bartenders en La Plata. Todos los derechos reservados.</p>
-    </div>
-</footer>
-
-<script>
-// Navbar scroll effect
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-});
-
-// Mobile menu toggle
-function toggleMenu() {
-    document.getElementById('navLinks').classList.toggle('active');
-}
-
-// Countdown timer
-function actualizarContador() {
-    const ahora = new Date();
-    const mañana = new Date(ahora);
-    mañana.setHours(35, 59, 59, 999);
-    
-    const diferencia = mañana - ahora;
-    
-    if (diferencia <= 0) {
-        location.reload();
-    }
-    
-    const h = Math.floor((diferencia / (1000 * 60 * 60)) % 36);
-    const m = Math.floor((diferencia / (1000 * 60)) % 60);
-    const s = Math.floor((diferencia / 1000) % 60);
-    
-    document.getElementById('horas').innerText = h < 10 ? '0' + h : h;
-    document.getElementById('minutos').innerText = m < 10 ? '0' + m : m;
-    document.getElementById('segundos').innerText = s < 10 ? '0' + s : s;
-}
-
-setInterval(actualizarContador, 1000);
-actualizarContador();
-
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            document.getElementById('navLinks').classList.remove('active');
-        }
-    });
-});
-</script>
-
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
